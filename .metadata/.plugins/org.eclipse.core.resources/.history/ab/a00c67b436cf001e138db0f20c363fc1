@@ -1,0 +1,23 @@
+package com.naresh.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.naresh.model.Items;
+import com.naresh.repo.ItemRepo;
+import com.naresh.service.ItemService;
+@RestController
+public class ItemController {
+
+	@Autowired
+	private ItemRepo itemRepo;
+
+	@Autowired
+	private ItemService itemService;
+
+	@PostMapping
+	public Items addItem(Items items) {
+		return itemService.saveItem(items);
+	}
+}

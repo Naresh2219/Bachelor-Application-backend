@@ -1,0 +1,12 @@
+package com.naresh.controller;
+
+import com.naresh.repo.ItemRepo;
+
+public class ItemController {
+
+	private ItemRepo itemRepo;
+	
+	public void listitems(){
+		return listitems();
+	}
+}

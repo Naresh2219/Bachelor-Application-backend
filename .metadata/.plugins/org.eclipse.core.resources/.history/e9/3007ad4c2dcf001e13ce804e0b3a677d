@@ -1,0 +1,9 @@
+package com.naresh.repo;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.naresh.model.Items;
+
+public interface IttemsRepo extends MongoRepository<int, Items>{
+
+}

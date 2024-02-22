@@ -1,0 +1,44 @@
+package com.naresh.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Items {
+
+	private int id;
+	private String list;
+	private long price;
+	public Items() {
+		super();
+	}
+	public Items(int id, String list, long price) {
+		super();
+		this.id = id;
+		this.list = list;
+		this.price = price;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getList() {
+		return list;
+	}
+	public void setList(String list) {
+		this.list = list;
+	}
+	public long getPrice() {
+		return price;
+	}
+	public void setPrice(long price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Items [id=" + id + ", list=" + list + ", price=" + price + "]";
+	}
+	
+	
+}

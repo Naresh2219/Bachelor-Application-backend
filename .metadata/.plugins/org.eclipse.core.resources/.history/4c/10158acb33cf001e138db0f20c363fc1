@@ -1,0 +1,17 @@
+package com.naresh.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Items {
+
+	@Id
+	private long id;
+	private String list;
+	private long price;
+	public Items() {
+		super();
+	}
+	
+}

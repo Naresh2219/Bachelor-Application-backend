@@ -1,0 +1,22 @@
+package com.naresh.model;
+
+import java.sql.Date;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Items")
+public class Expense {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String itemName;
+    private String itemQuantity;
+    private String itemPrice;
+    private Date createdAt;
+	
+}

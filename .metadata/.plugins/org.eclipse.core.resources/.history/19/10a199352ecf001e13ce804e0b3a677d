@@ -1,0 +1,5 @@
+package com.naresh.repo;
+
+public interface ItemsRepo imple  {
+
+}

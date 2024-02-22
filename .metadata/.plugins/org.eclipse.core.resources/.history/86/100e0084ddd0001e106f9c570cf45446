@@ -1,0 +1,32 @@
+package com.naresh.controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.naresh.model.Expense;
+import com.naresh.repo.ExpenseRepository;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/api/expenses")
+public class ExpenseController {
+    @Autowired
+    private ExpenseRepository expenseRepository;
+
+    @GetMapping("/all")
+    public List<Expense> getExpenses() {
+        return expenseRepository.findAll();
+    }
+
+    @PostMapping("/save")
+    public Expense addExpense(@RequestBody Expense expense) {
+        expense.setCreatedAt(LocalDateTime.now());
+        return expenseRepository.save(expense);
+    }
+    @DeleteMapping("/remove{id}")
+    public void deleteByid(@PathVariable Expense expense) {
+    	expenseRepository.delete(expense);
+    }
+}

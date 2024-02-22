@@ -1,0 +1,5 @@
+package com.naresh.repo;
+
+public interface IttemsRepo i{
+
+}

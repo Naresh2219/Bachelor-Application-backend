@@ -1,0 +1,14 @@
+package com.naresh.service;
+
+import org.springframework.stereotype.Service;
+
+import com.naresh.model.Expense;
+import com.naresh.model.Items;
+
+@Service
+public class ItemService {
+
+	public Items saveItem(Expense items) {
+		return items;
+	}
+}

@@ -1,0 +1,20 @@
+package com.naresh.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.naresh.model.Items;
+import com.naresh.repo.ItemRepo;
+import com.naresh.service.Item;
+import com.naresh.service.ItemService;
+
+public class ItemController {
+
+	private ItemRepo itemRepo;
+	
+	@Autowired
+	private ItemService itemService;
+	
+	public Item addItem(@RequestBody Items items) {
+		return itemService.sav
+}

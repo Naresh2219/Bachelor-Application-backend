@@ -1,0 +1,23 @@
+package com.naresh.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Items {
+
+	@Id
+	private String id;
+	private String list;
+	private String price;
+	public Items() {
+		super();
+	}
+	public Items(String id, String list, String price) {
+		super();
+		this.id = id;
+		this.list = list;
+		this.price = price;
+	}
+	
+}
